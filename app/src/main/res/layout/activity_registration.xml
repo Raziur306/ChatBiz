@@ -8,225 +8,205 @@
 
     <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="43dp">
+        android:layout_height="match_parent">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="Welcome to Chatbiz"
+        android:textColor="#4CAF50"
+        android:textSize="50sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-            <TextView
-                android:id="@+id/textView4"
-                android:layout_width="305dp"
-                android:layout_height="159dp"
-                android:layout_marginTop="68dp"
-                android:padding="10dp"
-                android:text="Welcome to Chatbiz"
-                android:textAlignment="textStart"
-                android:textColor="#38FF45"
-                android:textSize="50sp"
-                android:textStyle="bold"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.726"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <TextView
-                android:id="@+id/textView5"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="complete your registration here"
-                android:textColor="#000000"
-                android:textStyle="bold"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.417"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView4" />
-
-            <LinearLayout
-                android:id="@+id/linearLayout"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="32dp"
-                android:orientation="vertical"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/textView5">
-
-                <TextView
-                    android:id="@+id/textView6"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Your Name"
-                    android:textColor="#000000"
-                    tools:layout_editor_absoluteX="94dp"
-                    tools:layout_editor_absoluteY="289dp" />
-
-                <EditText
-                    android:id="@+id/regName"
-                    android:layout_width="223dp"
-                    android:layout_height="40dp"
-                    android:background="@drawable/regact"
-                    android:paddingStart="12dp"
-                    android:paddingEnd="12dp"
-                    android:ems="10"
-                    android:hint="Enter your name"
-                    android:inputType="textPersonName"
-                    android:textColor="#75000000"
-
-                    />
-            </LinearLayout>
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="complete your registration here"
+        app:layout_constraintBottom_toTopOf="@+id/textView6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
 
-            <LinearLayout
-                android:id="@+id/linearLayout4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:orientation="vertical"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/linearLayout">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="8dp"
-                    android:text="Your Email"
-                    android:textColor="#000000" />
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView5">
 
-                <EditText
-                    android:id="@+id/regEmail"
-                    android:layout_width="223dp"
-                    android:layout_height="40dp"
-                    android:ems="10"
-                    android:background="@drawable/regact"
-                    android:paddingStart="12dp"
-                    android:paddingEnd="12dp"
-                    android:hint="example@gmail.com"
-                    android:inputType="textEmailAddress"
-                    android:textColor="#75000000"
-                    app:layout_editor_absoluteX="100dp"
-                    tools:layout_editor_absoluteX="94dp"
-                    tools:layout_editor_absoluteY="314dp" />
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:text="Your Name"
+            android:textColor="#000000" />
 
-                />
-            </LinearLayout>
+        <EditText
+            android:id="@+id/regName"
+            android:layout_width="223dp"
+            android:layout_height="40dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:hint="Enter your name"
+            android:textColor="#75000000"
+
+            />
+    </LinearLayout>
 
 
-            <LinearLayout
-                android:id="@+id/linearLayout5"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:orientation="vertical"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/linearLayout4">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="8dp"
-                    android:text="Your Password"
-                    android:textColor="#000000" />
-
-                <EditText
-                    android:id="@+id/regPass"
-                    android:layout_width="223dp"
-                    android:layout_height="40dp"
-                    android:ems="10"
-                    android:hint="********"
-                    android:background="@drawable/regact"
-                    android:paddingStart="12dp"
-                    android:paddingEnd="12dp"
-                    android:inputType="textPassword"
-                    android:textColor="#75000000"
-                    app:layout_editor_absoluteX="100dp"
-                    tools:layout_editor_absoluteX="94dp"
-                    tools:layout_editor_absoluteY="314dp" />
-
-                />
-            </LinearLayout>
 
 
-            <LinearLayout
-                android:id="@+id/linearLayout6"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:orientation="vertical"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/linearLayout5">
+    <LinearLayout
+        android:id="@+id/linearLayout4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout">
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="8dp"
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:text="Your Email"
+            android:textColor="#000000" />
 
-                    android:text="Confirm Password"
-                    android:textColor="#000000" />
+        <EditText
+            android:id="@+id/regEmail"
+            android:layout_width="223dp"
+            android:layout_height="40dp"
+            android:ems="10"
+            android:hint="example@gmail.com"
+            android:inputType="textEmailAddress"
+            android:textColor="#75000000"
+            app:layout_editor_absoluteX="100dp"
+            tools:layout_editor_absoluteX="94dp"
+            tools:layout_editor_absoluteY="314dp" />
 
-                <EditText
-                    android:id="@+id/regConPass"
-                    android:layout_width="223dp"
-                    android:layout_height="40dp"
-                    android:ems="10"
-                    android:hint="********"
-                    android:background="@drawable/regact"
-                    android:paddingStart="12dp"
-                    android:paddingEnd="12dp"
-                    android:inputType="textPassword"
-                    android:textColor="#75000000"
-                    app:layout_editor_absoluteX="100dp"
-                    tools:layout_editor_absoluteX="94dp"
-                    tools:layout_editor_absoluteY="314dp" />
-
-                />
-            </LinearLayout>
+        />
+    </LinearLayout>
 
 
-            <TextView
-                android:id="@+id/errorMsg"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="16dp"
-                android:text="Invalid Input! Please Recheck"
-                android:textColor="#F44336"
-                android:visibility="gone"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/linearLayout6" />
+    <LinearLayout
+        android:id="@+id/linearLayout5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout4">
 
-            <TextView
-                android:id="@+id/textView10"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="already registered? Log in"
-                android:textColor="#00DC25"
-                android:layout_marginTop="20dp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/signUpBtn"
-                app:layout_constraintVertical_bias="0.411" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:text="Your Password"
+            android:textColor="#000000" />
 
-            <Button
-                android:id="@+id/signUpBtn"
-                android:layout_width="233dp"
-                android:layout_height="wrap_content"
+        <EditText
+            android:id="@+id/regPass"
+            android:layout_width="223dp"
+            android:layout_height="40dp"
+            android:ems="10"
+            android:hint="********"
+            android:inputType="textPassword"
+            android:textColor="#75000000"
+            app:layout_editor_absoluteX="100dp"
+            tools:layout_editor_absoluteX="94dp"
+            tools:layout_editor_absoluteY="314dp" />
 
-                android:elevation="10dp"
-                android:background="@drawable/regcustombutton"
-                android:text="Sign up"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/errorMsg" />
+        />
+    </LinearLayout>
 
+
+    <LinearLayout
+        android:id="@+id/linearLayout6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout5">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:text="Confirm Password"
+            android:textColor="#000000" />
+
+        <EditText
+            android:id="@+id/regConPass"
+            android:layout_width="223dp"
+            android:layout_height="40dp"
+            android:ems="10"
+            android:hint="********"
+            android:inputType="textPassword"
+            android:textColor="#75000000"
+            app:layout_editor_absoluteX="100dp"
+            tools:layout_editor_absoluteX="94dp"
+            tools:layout_editor_absoluteY="314dp" />
+
+        />
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/errorMsg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Invalid Input! Please Recheck"
+        android:textColor="#F44336"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout6" />
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="already registered? Log in"
+        android:textColor="#00DC25"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/signUpBtn"
+        app:layout_constraintVertical_bias="0.411" />
+
+    <Button
+        android:id="@+id/signUpBtn"
+        android:layout_width="233dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#07880C"
+        android:elevation="10dp"
+        android:text="Sign up"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/errorMsg" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.core.widget.NestedScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>
