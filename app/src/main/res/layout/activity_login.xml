@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".LoginActivity"
+    tools:context=".activities.LoginActivity"
     tools:layout_editor_absoluteX="-24dp"
     tools:layout_editor_absoluteY="-9dp">
 
@@ -25,7 +25,7 @@
         app:layout_constraintVertical_bias="0.194" />
 
     <EditText
-        android:id="@+id/editLoginEmailAddress"
+        android:id="@+id/loginEmail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="128dp"
@@ -40,7 +40,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView11" />
 
     <Button
-        android:id="@+id/buttonLogin"
+        android:id="@+id/loginBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="104dp"
@@ -48,39 +48,55 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Loginpass" />
+        app:layout_constraintTop_toBottomOf="@+id/loginPass" />
 
     <TextView
-        android:id="@+id/TextviewRegistration"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="New here? Sign up now for free!"
-        android:textColor="#000000"
-        android:textSize="17sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonLogin"
-        app:layout_constraintVertical_bias="0.478"
-        tools:textStyle="normal" />
-
-    <TextView
-        android:id="@+id/textView14"
+        android:id="@+id/loginWarning"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:drawableStart="@drawable/ic_warning"
         android:text=" Invalid password or email"
         android:textColor="#ED0000"
         android:textSize="13sp"
+        android:visibility="gone"
         app:layout_constraintBottom_toTopOf="@+id/textView15"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.403"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Loginpass"
+        app:layout_constraintTop_toBottomOf="@+id/loginPass"
         app:layout_constraintVertical_bias="0.466" />
 
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/loginBtn">
+
+        <TextView
+            android:id="@+id/TextviewRegistration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="New here?"
+            android:textColor="#000000"
+            android:textSize="17sp"
+            tools:textStyle="normal" />
+
+        <TextView
+            android:id="@+id/log_to_reg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" Sign up now for free!"
+            android:textColor="#04A632"
+            android:textSize="17sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
     <EditText
-        android:id="@+id/Loginpass"
+        android:id="@+id/loginPass"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
@@ -93,7 +109,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editLoginEmailAddress"
+        app:layout_constraintTop_toBottomOf="@+id/loginEmail"
         app:layout_constraintVertical_bias="0.0" />
 
     <TextView
@@ -104,7 +120,7 @@
         android:text="forgot password?"
         android:textColor="#E9020261"
         android:textSize="16sp"
-        app:layout_constraintBottom_toTopOf="@+id/buttonLogin"
+        app:layout_constraintBottom_toTopOf="@+id/loginBtn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         tools:textStyle="bold" />
