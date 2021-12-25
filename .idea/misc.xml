@@ -3,7 +3,11 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/raziu/AndroidStudioProjects/ChatBiz/app/src/main/res/layout/activity_call.xml" value="0.3307291666666667" />
+        <entry key="..\:/Users/raziu/AndroidStudioProjects/ChatBiz/app/src/main/res/layout/activity_friends.xml" value="0.3307291666666667" />
+        <entry key="..\:/Users/raziu/AndroidStudioProjects/ChatBiz/app/src/main/res/layout/activity_home.xml" value="0.34479166666666666" />
         <entry key="..\:/Users/raziu/AndroidStudioProjects/ChatBiz/app/src/main/res/layout/activity_main.xml" value="0.33" />
+        <entry key="..\:/Users/raziu/AndroidStudioProjects/ChatBiz/app/src/main/res/layout/activity_msg.xml" value="0.34479166666666666" />
         <entry key="..\:/Users/raziu/AndroidStudioProjects/ChatBiz/app/src/main/res/layout/activity_splash_screen.xml" value="0.34479166666666666" />
       </map>
     </option>

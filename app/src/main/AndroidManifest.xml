@@ -10,6 +10,21 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ChatBiz">
         <activity
+            android:name=".Fregments.FriendsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Fregments.MsgActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Fregments.ProfileActivity"
+            android:exported="false" />
+        <activity
+            android:name=".RegistrationActivity"
+            android:exported="false" />
+        <activity
+            android:name=".LoginActivity"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="false" />
         <activity
