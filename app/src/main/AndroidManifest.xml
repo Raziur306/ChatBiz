@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ChatBiz">
         <activity
+            android:name=".activities.ChatActivity"
+            android:exported="false" />
+        <activity
             android:name=".Fregments.FriendsActivity"
             android:exported="false" />
         <activity
@@ -20,9 +23,8 @@
             android:exported="false" />
         <activity
             android:name=".activities.RegistrationActivity"
-            android:windowSoftInputMode="adjustResize"
             android:exported="false"
-            />
+            android:windowSoftInputMode="adjustResize" />
         <activity
             android:name=".activities.LoginActivity"
             android:exported="false" />
