@@ -13,7 +13,8 @@ import com.chatbiz.Fregments.ChatsActivity;
 import com.chatbiz.Fregments.ProfileActivity;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
-public class MainActivity extends AppCompatActivity {
+public class
+MainActivity extends AppCompatActivity {
     private FrameLayout fragmentViewer;
     private  FragmentTransaction transaction;
     private  final Fragment allFragment[] ={new ChatsActivity(),new FriendsActivity(),new CallActivity(),new ProfileActivity()};
