@@ -13,7 +13,7 @@
             android:name=".Fregments.FriendsActivity"
             android:exported="false" />
         <activity
-            android:name=".Fregments.MsgActivity"
+            android:name=".Fregments.ChatsActivity"
             android:exported="false" />
         <activity
             android:name=".Fregments.ProfileActivity"
