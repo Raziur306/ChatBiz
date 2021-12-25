@@ -14,7 +14,7 @@ import com.chatbiz.R;
 import com.google.firebase.auth.FirebaseAuth;
 
 public class LoginActivity extends AppCompatActivity {
-    private TextView log_to_reg,loginWarning;
+    private TextView log_to_reg, loginWarning;
     private EditText loginPass, loginEmail;
     private Button loginBtn;
     private final FirebaseAuth mAuth = FirebaseAuth.getInstance();
@@ -29,7 +29,7 @@ public class LoginActivity extends AppCompatActivity {
             startActivity(new Intent(LoginActivity.this, RegistrationActivity.class));
         });
 
-        loginBtn.setOnClickListener(v->{
+        loginBtn.setOnClickListener(v -> {
             validation();
         });
     }
@@ -37,27 +37,21 @@ public class LoginActivity extends AppCompatActivity {
     private void validation() {
         String pass = loginPass.getText().toString();
         String email = loginEmail.getText().toString().trim();
-        if(pass.isEmpty() || email.isEmpty())
-        {
+        if (pass.isEmpty() || email.isEmpty()) {
             loginWarning.setVisibility(View.VISIBLE);
-        }
-        else
-        {
-            LogIn(pass,email);
+        } else {
+            LogIn(pass, email);
         }
     }
 
     private void LogIn(String pass, String email) {
-        mAuth.signInWithEmailAndPassword(email,pass).addOnCompleteListener(task->{
-           if(task.isSuccessful())
-           {
-               startActivity(new Intent(LoginActivity.this,MainActivity.class));
-               finish();
-           }
-           else
-           {
-               loginWarning.setVisibility(View.VISIBLE);
-           }
+        mAuth.signInWithEmailAndPassword(email, pass).addOnCompleteListener(task -> {
+            if (task.isSuccessful()) {
+                startActivity(new Intent(LoginActivity.this, MainActivity.class));
+                finish();
+            } else {
+                loginWarning.setVisibility(View.VISIBLE);
+            }
 
         });
     }
