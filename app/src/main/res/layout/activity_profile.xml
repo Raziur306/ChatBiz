@@ -8,6 +8,7 @@
     tools:context=".Fregments.ProfileActivity">
 
     <LinearLayout
+        android:id="@+id/linearLayout3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
@@ -207,6 +208,46 @@
             android:textColor="@color/black" />
 
     </LinearLayout>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/profile_image"
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        android:src="@drawable/prof_img"
+        app:civ_border_color="#D5879888"
+        app:civ_border_width="2dp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView11" />
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/changeImg"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/ic_baseline_camera_alt"
+        app:layout_constraintBottom_toBottomOf="@+id/profile_image"
+        app:layout_constraintEnd_toEndOf="@+id/profile_image"
+        app:layout_constraintHorizontal_bias="0.95"
+        app:layout_constraintStart_toStartOf="@+id/profile_image"
+        app:layout_constraintTop_toTopOf="@+id/profile_image"
+        app:layout_constraintVertical_bias="0.95" />
+
+
+
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:text="PROFILE"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
