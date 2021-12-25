@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "416786918360",
+    "project_id": "chatbiz-d29db",
+    "storage_bucket": "chatbiz-d29db.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:416786918360:android:274a8deab4c15b762460ad",
+        "android_client_info": {
+          "package_name": "com.chatbiz"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "416786918360-cs1e0i54hp6c961566svj61tmpbv7jh6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyByh4DsSTYCOcW-ipEamoId4ccmhQ5IxHw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "416786918360-cs1e0i54hp6c961566svj61tmpbv7jh6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
