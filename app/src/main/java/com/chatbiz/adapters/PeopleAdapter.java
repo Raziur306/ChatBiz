@@ -2,6 +2,8 @@ package com.chatbiz.adapters;
 
 import android.content.Context;
 import android.content.Intent;
+import android.os.Bundle;
+import android.os.Parcelable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -31,13 +33,6 @@ public class PeopleAdapter extends RecyclerView.Adapter<PeopleAdapter.ViewHolder
     @Override
     public PeopleAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(context).inflate(R.layout.people_recycler_item,parent,false);
-
-        view.setOnClickListener(v->{
-            context.getApplicationContext().startActivity(new Intent(context.getApplicationContext(), ChatActivity.class).setFlags(Intent.FLAG_ACTIVITY_NEW_TASK));
-
-        });
-
-
         return new ViewHolder(view);
     }
 
@@ -46,6 +41,19 @@ public class PeopleAdapter extends RecyclerView.Adapter<PeopleAdapter.ViewHolder
         holder.name.setText(user.get(position).getName());
         holder.email.setText(user.get(position).getEmail());
         Glide.with(context).load(user.get(position).getPhotoLink()).into(holder.imageView);
+
+        holder.itemView.setOnClickListener(v->{
+            Bundle bundle = new Bundle();
+            bundle.putString("name",user.get(position).getName());
+            bundle.putString("email",user.get(position).getEmail());
+            bundle.putString("photoLink",user.get(position).getPhotoLink());
+            bundle.putString("uid",user.get(position).getToken());
+            Intent intent = new Intent(context,ChatActivity.class).setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            intent.putExtra("user", bundle);
+            context.getApplicationContext().startActivity(intent);
+        });
+
+
     }
 
     @Override

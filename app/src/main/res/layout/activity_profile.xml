@@ -43,11 +43,10 @@
                     android:text="Name" />
 
                 <TextView
-                    android:id="@+id/textView9"
+                    android:id="@+id/userName"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="Raziur Rahman"
                     android:textColor="@color/black"
                     android:textStyle="bold" />
 
@@ -87,11 +86,10 @@
                     android:text="Email" />
 
                 <TextView
-                    android:id="@+id/textView9"
+                    android:id="@+id/userEmail"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="example@gmail.com"
                     android:textColor="@color/black"
                     android:textStyle="bold" />
 
@@ -133,11 +131,10 @@
                     android:text="Phone" />
 
                 <TextView
-                    android:id="@+id/textView9"
+                    android:id="@+id/userNumber"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="+888 01737956676"
                     android:textColor="@color/black"
                     android:textStyle="bold" />
 
@@ -179,11 +176,10 @@
                     android:text="About" />
 
                 <TextView
-                    android:id="@+id/textView9"
+                    android:id="@+id/userAbout"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
                     android:textColor="@color/black"
                     android:textStyle="bold" />
 
@@ -213,7 +209,6 @@
         android:id="@+id/profile_image"
         android:layout_width="180dp"
         android:layout_height="180dp"
-        android:src="@drawable/prof_img"
         app:civ_border_color="#D5879888"
         app:civ_border_width="2dp"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout3"
@@ -233,8 +228,6 @@
         app:layout_constraintStart_toStartOf="@+id/profile_image"
         app:layout_constraintTop_toTopOf="@+id/profile_image"
         app:layout_constraintVertical_bias="0.95" />
-
-
 
 
     <TextView

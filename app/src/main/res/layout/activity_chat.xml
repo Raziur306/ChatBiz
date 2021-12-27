@@ -20,8 +20,8 @@
             android:id="@+id/imageView5"
             android:layout_width="35dp"
             android:layout_height="match_parent"
-            android:layout_marginRight="20dp"
             android:layout_marginLeft="5dp"
+            android:layout_marginRight="20dp"
             app:srcCompat="@drawable/ic_baseline_arrow_back" />
 
         <LinearLayout
@@ -33,8 +33,7 @@
             <de.hdodenhof.circleimageview.CircleImageView
                 android:id="@+id/profile_image"
                 android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:src="@drawable/prof_img"/>
+                android:layout_height="40dp" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -44,18 +43,16 @@
                 android:orientation="vertical">
 
                 <TextView
-                    android:id="@+id/textView12"
+                    android:id="@+id/chatWithName"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Raziur Rahman"
                     android:textColor="@color/white"
                     android:textSize="16sp" />
 
                 <TextView
-                    android:id="@+id/textView13"
+                    android:id="@+id/chatWithStatus"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Active"
                     android:textColor="#DCFFFFFF" />
             </LinearLayout>
         </LinearLayout>
@@ -79,24 +76,23 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:ems="10"
-            android:inputType="textPersonName"
             android:hint="Message"
-             />
+            android:inputType="textPersonName" />
+
         <FrameLayout
             android:layout_width="40dp"
-            android:background="@drawable/background_chat_input"
-            android:layout_height="40dp">
+            android:layout_height="40dp"
+            android:background="@drawable/background_chat_input">
+
             <androidx.appcompat.widget.AppCompatImageView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:padding="8dp"
-                app:tint="@color/white"
-                android:src="@drawable/ic_send_msg"/>
+                android:src="@drawable/ic_send_msg"
+                app:tint="@color/white" />
         </FrameLayout>
 
     </LinearLayout>
-
-
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
