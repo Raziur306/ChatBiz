@@ -43,8 +43,6 @@ public class PeopleActivity extends Fragment {
         progressBar.setVisibility(View.VISIBLE);
         firestore.collection("users").get().addOnCompleteListener(task -> {
             if (task.isSuccessful() && task.getResult() != null) {
-
-
                 ArrayList<User> users = new ArrayList<>();
                 for (QueryDocumentSnapshot queryDocumentSnapshot : task.getResult()) {
                     if (queryDocumentSnapshot.getId().equals(mAuth.getCurrentUser().getUid())) {
@@ -53,7 +51,7 @@ public class PeopleActivity extends Fragment {
                         User user = new User();
                         user.setEmail(queryDocumentSnapshot.getString("email"));
                         user.setName(queryDocumentSnapshot.getString("name"));
-                        user.setToken(queryDocumentSnapshot.getString(queryDocumentSnapshot.getId()));
+                        user.setToken(queryDocumentSnapshot.getString("profileId"));
                         user.setPhotoLink(queryDocumentSnapshot.getString("profile"));
                         users.add(user);
                     }

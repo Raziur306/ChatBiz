@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Parcelable;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -48,6 +49,8 @@ public class PeopleAdapter extends RecyclerView.Adapter<PeopleAdapter.ViewHolder
             bundle.putString("email",user.get(position).getEmail());
             bundle.putString("photoLink",user.get(position).getPhotoLink());
             bundle.putString("uid",user.get(position).getToken());
+
+
             Intent intent = new Intent(context,ChatActivity.class).setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
             intent.putExtra("user", bundle);
             context.getApplicationContext().startActivity(intent);

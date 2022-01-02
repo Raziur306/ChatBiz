@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:layout_marginStart="6dp"
     android:layout_height="wrap_content">
 
 
@@ -11,8 +12,6 @@
         android:layout_width="25dp"
         android:layout_height="25dp"
         android:src="@drawable/prof_img"
-        app:civ_border_color="#FF000000"
-        app:civ_border_width="2dp"
         app:layout_constraintBottom_toBottomOf="@+id/textMessage" />
 
     <TextView
@@ -20,12 +19,15 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:background="@drawable/background_receive_message"
+        android:backgroundTint="#808080"
         android:padding="12dp"
         android:textColor="@color/white"
         android:textSize="13sp"
+        android:layout_marginStart="3dp"
         app:layout_constraintBaseline_toBaselineOf="@+id/profile_image"
         app:layout_constraintStart_toEndOf="@+id/profile_image"
-        app:layout_constraintWidth_percent="0.8" />
+        app:layout_constraintWidth_percent="0.8"
+        app:layout_constraintWidth_max="wrap" />
 
     <TextView
         android:id="@+id/textDateTime"

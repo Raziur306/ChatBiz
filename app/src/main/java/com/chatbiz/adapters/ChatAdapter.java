@@ -1,5 +1,7 @@
 package com.chatbiz.adapters;
 
+import android.content.Context;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,26 +14,28 @@ import com.bumptech.glide.Glide;
 import com.chatbiz.R;
 import com.chatbiz.model.ChatMessage;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class ChatAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
-    private List<ChatMessage> chatMessages;
+    private List<ChatMessage> chatMessages=new ArrayList<>();
     private String receiverProfileLink;
     private String senderId;
+    public static final int VIEW_TYPE_SENT = 1;
+    public static final int VIEW_TYPE_RECEIVE = 2;
+    private static Context context;
 
-    public ChatAdapter(List<ChatMessage> chatMessages, String receiverProfileLink, String senderId) {
+    public ChatAdapter(Context context, List<ChatMessage> chatMessages, String receiverProfileLink, String senderId) {
         this.chatMessages = chatMessages;
         this.receiverProfileLink = receiverProfileLink;
         this.senderId = senderId;
+        this.context=context;
     }
-
-    public static final int VIEW_TYPE_SENT = 1;
-    public static final int VIEW_TYPE_RECEIVE = 2;
-
-
     @NonNull
     @Override
     public RecyclerView.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+
+
         if(viewType==VIEW_TYPE_SENT)
         return new SenderMessageViewHolder(LayoutInflater.from(parent.getContext()).inflate(R.layout.item_container_send_message, parent, false));
 
@@ -52,7 +56,7 @@ public class ChatAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
     @Override
     public int getItemViewType(int position) {
-        if (chatMessages.get(position).senderId.equals(senderId))
+        if (chatMessages.get(position).getSenderId().equals(senderId))
             return VIEW_TYPE_SENT;
         else
             return VIEW_TYPE_RECEIVE;
@@ -60,7 +64,7 @@ public class ChatAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
     @Override
     public int getItemCount() {
-        return 0;
+        return chatMessages.size();
     }
 
 
@@ -70,13 +74,15 @@ public class ChatAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
         public ReceiveMessageViewHolder(@NonNull View itemView) {
             super(itemView);
             SenderPhoto = itemView.findViewById(R.id.profile_image);
-            textMessage = itemView.findViewById(R.id.textView);
+            textMessage = itemView.findViewById(R.id.textMessage);
 
         }
         void setData(ChatMessage chatMessage , String profileLink)
         {
-            textMessage.setText(chatMessage.message);
-            Glide.with(imageView.getContext()).load(profileLink).into(SenderPhoto);
+          textMessage.setText(chatMessage.getMessage());
+            Glide.with(context).load(profileLink).into(SenderPhoto);
+
+
         }
 
     }
@@ -85,11 +91,11 @@ public class ChatAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
         TextView textMessage;
         public SenderMessageViewHolder(@NonNull View itemView) {
             super(itemView);
-            textMessage = itemView.findViewById(R.id.textView);
+            textMessage = itemView.findViewById(R.id.textMessage);
         }
         void setData(ChatMessage chatMessage)
         {
-            textMessage.setText(chatMessage.message);
+          textMessage.setText(chatMessage.getMessage().toString());
         }
 
     }

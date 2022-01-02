@@ -1,16 +1,22 @@
 package com.chatbiz.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.security.crypto.MasterKeys;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.EditText;
+import android.widget.LinearLayout;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.chatbiz.R;
+import com.chatbiz.encrypter.Encryption;
 import com.google.firebase.auth.FirebaseAuth;
 
 public class LoginActivity extends AppCompatActivity {
@@ -18,6 +24,8 @@ public class LoginActivity extends AppCompatActivity {
     private EditText loginPass, loginEmail;
     private Button loginBtn;
     private final FirebaseAuth mAuth = FirebaseAuth.getInstance();
+    private LinearLayout loginProcess;
+    private CheckBox rememberMe;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,20 +48,42 @@ public class LoginActivity extends AppCompatActivity {
         if (pass.isEmpty() || email.isEmpty()) {
             loginWarning.setVisibility(View.VISIBLE);
         } else {
-            LogIn(pass, email);
+
+            getWindow().setFlags(WindowManager.LayoutParams.FLAG_NOT_TOUCHABLE, WindowManager.LayoutParams.FLAG_NOT_TOUCHABLE);
+            loginProcess.setVisibility(View.VISIBLE);
+            LogIn(pass, email, rememberMe.isChecked());
+
         }
     }
 
-    private void LogIn(String pass, String email) {
+    private void LogIn(String pass, String email, boolean flag) {
         mAuth.signInWithEmailAndPassword(email, pass).addOnCompleteListener(task -> {
             if (task.isSuccessful()) {
-                startActivity(new Intent(LoginActivity.this, MainActivity.class));
-                finish();
+                loginSuccess(email,pass,flag);
+
             } else {
                 loginWarning.setVisibility(View.VISIBLE);
+                loginProcess.setVisibility(View.GONE);
             }
-
+            getWindow().clearFlags(WindowManager.LayoutParams.FLAG_NOT_TOUCHABLE);
         });
+    }
+
+    private void loginSuccess(String email, String pass, boolean flag) {
+        if(flag)
+        {
+            Encryption e = new Encryption(LoginActivity.this,email,pass);
+            e.encryptSave();
+            loginProcess.setVisibility(View.GONE);
+            startActivity(new Intent(LoginActivity.this, MainActivity.class));
+            finish();
+
+        }
+        else {
+            loginProcess.setVisibility(View.GONE);
+            startActivity(new Intent(LoginActivity.this, MainActivity.class));
+            finish();
+        }
     }
 
     private void initView() {
@@ -62,5 +92,7 @@ public class LoginActivity extends AppCompatActivity {
         loginEmail = findViewById(R.id.loginEmail);
         loginBtn = findViewById(R.id.loginBtn);
         loginWarning = findViewById(R.id.loginWarning);
+        loginProcess = findViewById(R.id.loginProgress);
+        rememberMe = findViewById(R.id.rememberMe);
     }
 }

@@ -72,6 +72,7 @@ public class RegistrationActivity extends AppCompatActivity {
         HashMap<String, Object> user = new HashMap<>();
         user.put("name", name);
         user.put("email", email);
+        user.put("profileId",mAuth.getCurrentUser().getUid());
         user.put("about","Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.");
         user.put("phone","+880 1XXXXXXXXX");
         user.put("profile", "https://firebasestorage.googleapis.com/v0/b/chatbiz-d29db.appspot.com/o/prof_img.png?alt=media&token=a7cf21e3-5250-4a7d-8fc4-f8535a095abc");
